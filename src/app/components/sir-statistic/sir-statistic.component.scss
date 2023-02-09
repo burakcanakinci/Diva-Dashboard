@@ -1,0 +1,166 @@
+@import '../../../scss/styles.scss';
+
+::ng-deep app-sir-statistic {
+  height: 47%;
+  display: block;
+}
+.chart {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 233px;
+  height: 234px;
+  h3 {
+    text-align: center;
+    padding: 2vh 0 0;
+    height: 7vh;
+    font-size: 2vh;
+    color: $text-color;
+    font-weight: 500;
+    margin: 0;
+  }
+  &-section {
+  display: grid;
+  width: 46% ;
+  margin: 2vh 2vw;
+  }
+  &-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  &-info {
+    color: $text-color;
+    min-width: 7vw;
+    margin-top: 3vh;
+    margin-bottom: 0.4vh;
+    font-size: 1.4vh;
+    &-row {
+      display: flex;
+      &__counts {
+        display: grid;
+        .colored-label {
+          font-size: 1.2vh;
+          border-radius: 10px;
+          padding: 0 0.3vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 6px;
+          margin-bottom: 0.4vh;
+          color: #fff;
+          font-weight: 600;
+          &--green-viridian {
+            background: $green-viridian;
+          }
+          &--blue-green {
+            background: $blue-green;
+          }
+          &--gray {
+            background: #c3cacd;
+            color: $text-color;
+          }
+        }
+      }
+      &__titles {
+        .type {
+          min-width: 7vw;
+          color: #333;
+          margin-bottom: 0.4vh;
+          font-size: 1.4vh;
+        }
+      }
+      &__trends {
+        .rise-indicator {
+          width: 1vw;
+          height: 2vh;
+          background: #FFF;
+          border-radius: 50%;
+          display: grid;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 8px;
+          &__up {
+            mat-icon {
+              width: 1vw;
+              height: 1.8vh;
+              color: #00a09f;
+              transform: rotate(220deg);
+              font-size: 1.8vh;
+            }
+          }
+          &__flat {
+            mat-icon {
+              width: .9vw;
+              height: 1.9vh;
+              color: black;
+              transform: rotate(180deg);
+              font-size: 1.8vh;
+            }
+          }
+          &__down {
+            mat-icon {
+              width: .9vw;
+              height: 1.9vh;
+              color: $red-sizzling;
+              transform: rotate(140deg);
+              font-size: 1.8vh;
+            }
+          }
+        }
+      }
+    }
+  }
+  .doughnut-info {
+    position: absolute;
+    padding-top: 5vh;
+    width: 15.1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .total-sirs-quant {
+      font-size: 4vh;
+      line-height: 4vh;
+      color: $text-color;
+      margin: 16px 0 4px;
+    }
+    .total-sirs {
+      text-transform: uppercase;
+      color: #7d7d7d;
+      opacity: .5;
+      font-weight: 500;
+      font-size: 1.6vh;
+      line-height: 1.6vh;
+      margin-bottom: 6px;
+    }
+    .total-sirs-trend__up {
+      width: 2.5vh;
+      height: 2.5vh;
+      background: #FFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &::after {
+        content: "\2198";
+        font-size: 2.5vh;
+        color: $green-viridian;
+      }
+    }
+    .total-sirs-trend__down {
+      width: 2.5vh;
+      height: 2.5vh;
+      background: #FFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &::after {
+        content: "\2197";
+        font-size: 2.5vh;
+        color: $red-sizzling;
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@use '../../../scss/styles.scss';
+
+.check-statistic {
+  &__container {
+    margin: 0 2vw;
+  }
+  &__title-row {
+    display: flex;
+    padding-top: 2vh;
+    .title {
+      width: 30%;
+      font-size: 2vh;
+      color: styles.$text-color;
+      margin-left: 1.2vw;
+      font-weight: 500;
+    }
+  }
+  &__wrapper {
+    display: flex;
+  }
+  &__item {
+    &:first-of-type {
+      padding-left: 2vw;
+      padding-top: 1vh;
+    }
+    &:last-of-type {
+      padding-left: 3vw;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 0;
+    width: 202px;
+    height: 170px;
+    .bar-title {
+      display: flex;
+      align-items: center;
+      height: 4vh;
+      p {
+        font-size: 1.5vh;
+        color: #333;
+        margin: 0.3vh 0.5vw;
+      }
+      .rise-indicator {
+        width: 1vw;
+        height: 2vh;
+        background: #FFF;
+        border-radius: 50%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 8px;
+        &__down {
+          mat-icon {
+            width: .9vw;
+            height: 1.9vh;
+            color: styles.$red-sizzling;
+            transform: rotate(140deg);
+            font-size: 1.8vh;
+          }
+        }
+        &__up {
+          mat-icon {
+            width: 1vw;
+            height: 1.8vh;
+            color: #00a09f;
+            transform: rotate(220deg);
+            font-size: 1.8vh;
+          }
+        }
+      }
+    }
+  }
+}

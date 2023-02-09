@@ -1,0 +1,38 @@
+<div class="check-statistic__container">
+  <app-search-bar [selectedDropdown]="'bar'" [selectedOption]="'Nächsten 7 Tage'">Check Statistic</app-search-bar>
+  <div class="check-statistic__title-row">
+    <div class="title"></div>
+    <div class="title">Anzahl</div>
+    <div class="title">Dauer in min</div>
+  </div>
+  <div class="check-statistic__wrapper">
+    <div class="check-statistic__item">
+      <div class="bar-title">
+        <p>Überfällig (ÜF)</p>
+        <div class="rise-indicator rise-indicator__down">
+          <mat-icon _ngcontent-trj-c47="" role="img" class="mat-icon notranslate arrow_falling_icon material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">keyboard_backspace</mat-icon>
+        </div>
+      </div>
+      <div class="bar-title">
+        <p>Fällig in Kulanz (FK)</p>
+        <div class="rise-indicator rise-indicator__up">
+          <mat-icon _ngcontent-trj-c47="" role="img" class="mat-icon notranslate arrow_falling_icon material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">keyboard_backspace</mat-icon>
+        </div>
+      </div>
+      <div class="bar-title">
+        <p>Fällig (F)</p>
+        <div class="rise-indicator rise-indicator__up">
+          <mat-icon _ngcontent-trj-c47="" role="img" class="mat-icon notranslate arrow_falling_icon material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">keyboard_backspace</mat-icon>
+        </div>
+      </div>
+      <div class="bar-title">
+        <p>Vorschau</p>
+        <div class="rise-indicator rise-indicator__down">
+          <mat-icon _ngcontent-trj-c47="" role="img" class="mat-icon notranslate arrow_falling_icon material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">keyboard_backspace</mat-icon>
+        </div>
+    </div>
+  </div>
+  <div *ngFor="let chart of barChartInfo " class="check-statistic__item">
+    <app-bar-chart [barChartData]="chart.chartData"></app-bar-chart>
+  </div>
+</div>

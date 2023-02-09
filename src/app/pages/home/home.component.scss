@@ -1,0 +1,11 @@
+.container {
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  &__left {
+    display: grid;
+    grid-template-rows: 50vh auto;
+  }
+  &__right {
+    display: grid;
+  }
+}

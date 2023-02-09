@@ -1,0 +1,14 @@
+<div class="search-bar-container">
+  <div class="title-section">
+    <ng-content></ng-content>
+  </div>
+  <div class="dropdown-section" (click)="toggleDropdown()">
+    <p>{{ selectedOption }}</p>
+    <mat-icon style="color: black;" _ngcontent-uss-c27="" role="img" aria-hidden="false" class="mat-icon notranslate expand-icon material-icons mat-icon-no-color" data-mat-icon-type="font">keyboard_arrow_down</mat-icon>
+  </div>
+    <app-dropdown [selectedOption]="selectedOption"
+                  [type]="selectedDropdown"
+                  (selected)="selectOption($event)"
+                  *ngIf="showDropdown">
+    </app-dropdown>
+</div>

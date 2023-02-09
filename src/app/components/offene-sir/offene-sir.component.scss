@@ -1,0 +1,67 @@
+@use '../../../scss/styles.scss' as style;
+
+.list-wrapper {
+  width: 23vw;
+  height: 82vh;
+  padding-top: 2vh;
+  margin-right: 2vw;
+  .title-bar {
+    display: flex;
+    width: 100%;
+    background: #FFF;
+    border-top-left-radius: 0.4vh;
+    border-top-right-radius: 0.4vh;
+    position: relative;
+    .title-section {
+      display: flex;
+      padding: 1vh 1vw;
+      p {
+        font-size: 1.5vh;
+        font-weight: 500;
+        color: style.$text-color;
+      }
+      span {
+        background: #EEEEEE;
+        color: #7d7d7d;
+        font-size: 1.3vh;
+        border-radius: 1vh;
+        padding: 0 0.4vw;
+        margin-left: 0.4vw;
+      }
+    }
+    .sort-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      margin-left: auto;
+      margin-right: 0.2vw;
+      .mat-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3vh;
+        height: 3vh;
+        color: #7d7d7d;
+        border-radius: 50%;
+      }
+    }
+    .dropdown-section {
+      display: flex;
+      align-items: center;
+      font-size: 1.5vh;
+      font-family: Roboto Medium;
+      border-left: 1px solid #c3cacd;
+      cursor: pointer;
+      padding: 0 1vw;
+      p {
+        color: #7d7d7d
+      }
+      .mat-icon {
+        color: #333;
+        transition: all .3s ease;
+      }
+    }
+  }
+}

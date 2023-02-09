@@ -1,0 +1,163 @@
+@import '../../../scss/styles.scss';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+section {
+  margin: 0 auto;
+}
+.container {
+  &__objectstructure {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    width: 96vw;
+    height: 8vh;
+    border-bottom: .5px solid #c3cacd;
+    font-size: 1.8vh;
+    white-space: nowrap;
+  }
+}
+.objectstructure {
+  &-wrapper {
+    display: flex;
+    width: 98vw;
+    color: $text-color;
+    font-weight: 500;
+    height: 4vh;
+    &-title-box {
+      display: flex;
+      cursor: pointer;
+      &-title {
+        button {
+          align-items: flex-start;
+          font-size: 1.8vh;
+          font-weight: 400;
+          border: none;
+          width: auto;
+          overflow: visible;
+          background: transparent;
+          color: inherit;
+          font: inherit;
+          line-height: normal;
+        }
+        mat-menu {
+          background: #FFF;
+          box-shadow: 0 12px 17px 2px #00000024,0 5px 22px 4px #0000001f,0 7px 8px -4px #0003;
+          max-height: 24vh;
+          overflow: hidden;
+        }
+      }
+      .wrapper-icon {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+      }
+    }
+    &-groups {
+      display: flex;
+      margin-left: 2vw;
+      li {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        font-size: 1.8vh;
+        margin-right: 1.4vw;
+        color: #333;
+        cursor: pointer;
+      }
+      button {
+        display: flex;
+        align-items: flex-start;
+        padding-left: 0;
+        font-size: 1.8vh;
+        font-weight: 400;
+        border: none;
+        width: auto;
+        overflow: visible;
+        background: transparent;
+        color: inherit;
+        font: inherit;
+        line-height: normal;
+      }
+    }
+    &-reload-data {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 0.8vh;
+      margin-left: auto;
+      width: 8vw;
+      cursor: pointer;
+      &__time {
+        font-size: 2vh;
+        padding: 0 0.7vw;
+        font-weight: 400;
+      }
+      mat-icon {
+        display: flex;
+        align-items: flex-start;
+        width: 3vh;
+        height: 3vh;
+        font-size: 2.4vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #00A09F;
+        border-radius: 50%;
+        color: #fff;
+      }
+    }
+  }
+}
+.selected {
+  color: $green-viridian !important;
+  border-bottom: 2px solid #00A09F;
+}
+.objectstructure-menu {
+  position: absolute;
+  height: 200px;
+  max-width: 280px;
+}
+.teams-menu {
+  height: 200px;
+  right: 190px;
+}
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #d4d4d4;
+  border-radius: 12px;
+  border: 3px solid #ffffff;
+}
+.mat-mdc-menu-content .mat-mdc-menu-item .mdc-list-item__primary-text {
+  font-size: 12.5px;
+  font-weight: 400;
+}
+.mat-badge-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5vw;
+  height: 1.8vh;
+  margin-left: 0.4vw;
+  border-radius: 1vh;
+  font-size: 1.2vh;
+  font-weight: 700;
+  color: #fff;
+}
+.teams-badge {
+  position: relative;
+  left: 15px;
+  top: 8px;
+}
+.li-badge {
+  position: relative;
+  right: 15px;
+  top: 3px;
+}
+.flex-items {
+  display: flex;
+}

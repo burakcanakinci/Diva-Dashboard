@@ -1,0 +1,10 @@
+<div class="dropdown">
+  <ul>
+    <li class="dropdown-option"
+        *ngFor="let chart of chartData"
+        (click)="selectChartIndex(chart.id)"
+        (click)="selectOption(chart.title)">
+      {{ chart.title }}
+    </li>
+  </ul>
+</div>

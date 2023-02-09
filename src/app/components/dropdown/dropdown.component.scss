@@ -1,0 +1,29 @@
+@import '../../../scss/styles.scss';
+
+.dropdown {
+  position: absolute;
+  display: flex;
+  background: #FFF;
+  box-shadow: 0 12px 17px 2px #00000024, 0 5px 22px 4px #0000001f, 0 7px 8px -4px #0003;
+  max-height: 24vh;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  position: absolute;
+  top: 4.2vh;
+  right: 0;
+  border-radius: 0.4vh;
+  z-index: 50;
+  &-option {
+    padding: 2vh 1.4vw;
+    border-bottom: 0.5px solid #c3cacd;
+    white-space: nowrap;
+    color: $text-color;
+    display: flex;
+    &:hover {
+      background: $hover-gray;
+      color: $green-viridian;
+      cursor: pointer;
+    }
+  }
+}

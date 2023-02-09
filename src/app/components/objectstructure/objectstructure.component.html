@@ -1,0 +1,84 @@
+<section class="container__objectstructure">
+  <div class="objectstructure-wrapper">
+    <div class="objectstructure-wrapper-title-box">
+      <div [matMenuTriggerFor]="menuObjectstructure" (click)="toggleFirstMenu = !toggleFirstMenu" class="objectstructure-wrapper-title-box-title">
+        Objectstructure:
+        <button mat-button style="font-weight: 400;">{{ selectedItem }}</button>
+        <mat-menu #menuObjectstructure="matMenu" class="objectstructure-menu">
+          <button mat-menu-item (click)="setSelectedItem('Alle (020-0802, +9)')">Alle</button><mat-divider></mat-divider>
+          <button mat-menu-item (click)="setSelectedItem('020-0802 Werkzeugzentrallager')">020-0802 Werkzeugzentrallager</button><mat-divider></mat-divider>
+          <button mat-menu-item (click)="setSelectedItem('020-1302 TG/OE Leitung allgem')">020-1302 TG/OE Leitung allgem</button><mat-divider></mat-divider>
+          <button mat-menu-item (click)="setSelectedItem('020-1802 KEM Fertigung allg.')">020-1802 KEM Fertigung allg.</button><mat-divider></mat-divider>
+          <button mat-menu-item (click)="setSelectedItem('020-7732 Werkstransport allg.')">020-7732 Werkstransport allg.</button><mat-divider></mat-divider>
+          <button mat-menu-item (click)="setSelectedItem('020-8082 Bau 8 Metallb.')">020-8082 Bau 8 Metallb.</button><mat-divider></mat-divider>
+          <button mat-menu-item (click)="setSelectedItem('Alle Greifer')">Alle Greifer</button><mat-divider></mat-divider>
+          <button mat-menu-item (click)="setSelectedItem('Alle Motoren mit Lüfter')">Alle Motoren mit Lüfter</button><mat-divider></mat-divider>
+          <button mat-menu-item (click)="setSelectedItem('Axiallager')">Axiallager</button>
+        </mat-menu>
+      </div>
+      <div class="wrapper-icon">
+        <mat-icon *ngIf="toggleFirstMenu" _ngcontent-uss-c27="" role="img" aria-hidden="false" class="mat-icon notranslate expand-icon material-icons mat-icon-no-color" data-mat-icon-type="font">keyboard_arrow_down</mat-icon>
+        <mat-icon *ngIf="!toggleFirstMenu" _ngcontent-uss-c27="" role="img" aria-hidden="false" class="mat-icon notranslate expand-icon material-icons mat-icon-no-color" data-mat-icon-type="font">keyboard_arrow_up</mat-icon>
+      </div>
+    </div>
+    <!-- <ul class="objectstructure-wrapper-groups">
+      <li [ngClass]="{'selected': i === selectedIndex}"
+          (click)="selectedIndex = i"
+          *ngFor="let item of items; let i = index">
+        {{ item }} 
+      </li>
+      <li [ngClass]="{'selected': selectedIndex === 0}" (click)="selectedIndex = 0">Alle Gruppen</li>
+      <li [ngClass]="{'selected': selectedIndex === 1}" (click)="selectedIndex = 1" (click)="toggleLiBadgeVisibility()">8500 Galinski-A...</li><div class="li-badge" [matBadgeHidden]="!badgeHidden" matBadge="3" matBadgeColor="warn" matBadgeSize="small"></div>
+      <li [ngClass]="{'selected': selectedIndex === 2}" (click)="selectedIndex = 2">9400 Haas</li>
+      <li [ngClass]="{'selected': selectedIndex === 3}" (click)="selectedIndex = 3" (click)="toggleLiBadgeVisibility()">8100 Basis Werk...</li><div class="li-badge" [matBadgeHidden]="!badgeHidden" matBadge="8" matBadgeColor="warn" matBadgeSize="small"></div>
+      <li [ngClass]="{'selected': selectedIndex === 4}" (click)="selectedIndex = 4">8800 OMS-B</li>
+      <li [ngClass]="{'selected': selectedIndex === 5}" (click)="selectedIndex = 5">8900 OMS-B/ GLT...</li>
+      <div mat-button [matMenuTriggerFor]="menuTeams" [ngClass]="{'selected': selectedIndex === 6}" (click)="selectedIndex = 6">
+        {{ selectedMenuItem | slice: 0:10 }}
+        {{ selectedMenuItem.length > 10 ? selectedMenuItem.slice(0,10) : selectedMenuItem }}{{ selectedMenuItem.length > 10 ? '...+7' : ''}}
+      </div>
+        <mat-menu #menuTeams="matMenu" class="teams-menu">
+          <button mat-menu-item (click)="setSelectedMenuItem('9000 Gruener')">9000 Gruener</button><mat-divider></mat-divider>
+          <button mat-menu-item (click)="setSelectedMenuItem('2600 Kraft / Flath')">2600 Kraft / Flath</button><mat-divider></mat-divider>
+          <button mat-menu-item (click)="setSelectedMenuItem('6200 Montage')" (click)="toggleBadgeVisibility()"><div class="teams-badge" [matBadgeHidden]="hidden" matBadge="11" matBadgeColor="warn" matBadgeSize="small"></div>6200 Montage</button><mat-divider></mat-divider>
+          <button mat-menu-item (click)="setSelectedMenuItem('9000 Facility Service')">9000 Facility Service</button><mat-divider></mat-divider>
+          <button mat-menu-item (click)="setSelectedMenuItem('7800 OMS-B Auftragsteuerung')">7800 OMS-B Auftragsteuerung</button><mat-divider></mat-divider>
+          <button mat-menu-item (click)="setSelectedMenuItem('9300 RVO')">9300 RVO</button><mat-divider></mat-divider>
+          <button mat-menu-item (click)="setSelectedMenuItem('8075 Fremdfirmenkoordinator OER A,M')">8075 Fremdfirmenkoordinator OER A,M</button><mat-divider></mat-divider>
+          <button mat-menu-item (click)="setSelectedMenuItem('0177 IH-HV Reman')">0177 IH-HV Reman</button>
+        </mat-menu>
+        <mat-icon _ngcontent-uss-c27="" role="img" aria-hidden="false" class="mat-icon notranslate expand-icon material-icons mat-icon-no-color" data-mat-icon-type="font">keyboard_arrow_down</mat-icon>
+        <mat-icon _ngcontent-uss-c27="" role="img" aria-hidden="false" class="mat-icon notranslate expand-icon material-icons mat-icon-no-color" data-mat-icon-type="font">keyboard_arrow_up</mat-icon>
+    </ul> -->
+    <ul class="objectstructure-wrapper-groups">
+      <!-- <li (click)="selectedIndex = 0" [ngClass]="{'selected': 0 === selectedIndex}">Alle Gruppen</li> -->
+      <li *ngFor="let item of menuItems | slice:0:6; let i = index"
+          (click)="selectedIndex = item.index"
+          [ngClass]="{'selected': i === selectedIndex}">
+        {{ item.title }}
+      </li>
+    </ul>
+    <div *ngIf="menuItems.length > 6" [matMenuTriggerFor]="menuTeams"
+          [ngClass]="{'selected': selectedIndex >= 6}"
+          (click)="selectedIndex = 7">
+      <div class="flex-items">
+        {{ selectedMenuItem.length > 10 ? selectedMenuItem.slice(0,10) : selectedMenuItem }}{{ selectedMenuItem.length > 10 ? '...+7' : ''}}
+        <mat-icon _ngcontent-uss-c27="" role="img" aria-hidden="false" class="mat-icon notranslate expand-icon material-icons mat-icon-no-color" data-mat-icon-type="font">keyboard_arrow_down</mat-icon>
+      </div>
+    </div>
+    <mat-menu #menuTeams="matMenu" class="teams-menu">
+      <div style="border-bottom: 0.5px solid #c3cacd;" mat-menu-item
+            *ngFor="let item of menuItems | slice:6; let i = index"
+            (click)="selectedIndex = item.index"
+            [ngClass]="{'selected': i === selectedIndex}">
+        {{ item.title }}
+      </div>
+    </mat-menu>
+    <div class="objectstructure-wrapper-reload-data">
+      <div class="objectstructure-wrapper-reload-data__time">
+        {{ getMinutes() }}:{{ getSeconds() | number: '2.0' }}
+      </div>
+      <mat-icon (click)="resetTimer()" _ngcontent-uss-c27="" role="img" aria-hidden="false" class="mat-icon notranslate refresh-icon material-icons mat-icon-no-color" data-mat-icon-type="font">refresh</mat-icon>
+    </div>
+  </div>
+</section>

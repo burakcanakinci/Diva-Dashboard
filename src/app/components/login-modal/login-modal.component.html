@@ -1,0 +1,19 @@
+  <div class="blur-wrapper">
+    <div class="login-modal">
+      <div class="login-modal-header">
+        <p>Teamleitung Login</p>
+      </div>
+      <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+        <div class="input-wrapper">
+          <input name="username" type="text" placeholder="username" [(ngModel)]="username" required>
+        </div>
+        <div class="input-wrapper">
+          <input name="password" type="password" placeholder="password" [(ngModel)]="password" required>
+        </div>
+        <div class="login-modal-btn-line">
+          <button type="submit">Login</button>
+          <button>Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,39 @@
+<div class="chart-section">
+  <app-search-bar [selectedDropdown]="'doughnut'" [selectedOption]="'Alle'">SIR Statistic</app-search-bar>
+  <div class="chart-wrapper">
+    <div *ngFor="let chart of chartInfo" class="chart">
+      <h3 class="chart-title">{{ chart.title }}</h3>
+      <div class="doughnut-info">
+        <div class="total-sirs-quant">{{ chart.sirsQuant }}</div>
+        <div class="total-sirs">Total Sirs</div>
+        <div class="{{ chart.trendArrow }}"></div>
+      </div>
+      <app-pie-chart [chartData]="chart.chartData"></app-pie-chart>
+      <div class="chart-info">
+        <div class="chart-info-row">
+          <div class="chart-info-row__counts">
+            <span class="colored-label colored-label--green-viridian">{{ chart.chartNumberFirst }}</span>
+            <span class="colored-label colored-label--blue-green">{{ chart.chartNumberSecond }}</span>
+            <span class="colored-label colored-label--gray">{{ chart.chartNumberThird }}</span>
+          </div>
+          <div class="chart-info-row__titles">
+            <p class="type">SIR geschlossen</p>
+            <p class="type">SIR in Bearbeitung</p>
+            <p class="type">offene SIR</p>
+          </div>
+          <div class="chart-info-row__trends">
+            <div class="rise-indicator {{ chart.riseIndicatorFirst }}">
+              <mat-icon _ngcontent-trj-c47="" role="img" class="mat-icon notranslate arrow_falling_icon material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">keyboard_backspace</mat-icon>
+            </div>
+            <div class="rise-indicator {{ chart.riseIndicatorSecond }}">
+              <mat-icon _ngcontent-trj-c47="" role="img" class="mat-icon notranslate arrow_falling_icon material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">keyboard_backspace</mat-icon>
+            </div>
+            <div class="rise-indicator {{ chart.riseIndicatorThird }}">
+              <mat-icon _ngcontent-trj-c47="" role="img" class="mat-icon notranslate arrow_falling_icon material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">keyboard_backspace</mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,123 @@
+@import '../../../scss/styles.scss';
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 8vh;  
+  width: 100vw;
+  background-color: $green-viridian;
+  &__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+    padding: 0 2vw;
+    &__wrapper {
+      font-size: 45px;
+      font-weight: 700;
+    }
+  }
+  &__menu {
+    width: 20vw;
+    height: 100%;
+    background: $cyan-dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .view-info {
+      width: 70%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 1vw;
+      .view-name {
+        font-size: 2vh;
+      }
+    }
+    .view-menu {
+      width: 20%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      mat-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 2vw;
+        height: 2vw;
+      }
+      mat-icon:hover {
+        background-color: $green-viridian;
+      }
+      mat-icon::after {
+        background-color: $green-viridian;
+      }
+    }
+  }
+  &__time {
+    font-size: 2vh;
+  }
+}
+.dropdown-menu {
+  display: block;
+  width: 18vw;
+  position: absolute;
+  top: 9vh;
+  right: 1.9vw;
+  border-radius: 0.5vw;
+  box-shadow: 0 12px 17px 2px #00000024, 0 5px 22px 4px #0000001f, 0 7px 8px -4px #0003;
+  z-index: 50;
+  background-color: white;
+  p {
+    margin: 0;
+  }
+  ul {
+    .admin-name {
+      font-size: 10px;
+      opacity: 0.6;
+      padding-bottom: 15px;
+    }
+  }
+  li {
+    min-height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 1vw;
+    background: #FFF;
+    cursor: pointer;
+    border-top-left-radius: 0.5vw;
+    border-top-right-radius: 0.5vw;
+  }
+  li:hover {
+    color: $green-viridian !important;
+  }
+  li:nth-child(2) {
+    border-bottom-left-radius: 0.5vw;
+    border-bottom-right-radius: 0.5vw;
+  }
+  .admin-li-el:hover {
+    color: $green-viridian !important;
+  }
+  p {
+    color: $text-color;
+    padding: 0;
+  }
+  li {
+    color: $text-color;
+    padding: 14.8px;
+  }
+  li:first-child {
+    border-bottom: 0.5px solid rgb(195, 202, 205);
+  }
+  li:nth-child(2) {
+    padding-bottom: 0;
+  }
+}
+.display-none {
+  display: none;
+}

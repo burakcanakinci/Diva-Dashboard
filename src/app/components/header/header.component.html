@@ -1,0 +1,36 @@
+<div class="header">
+  <div class="header__logo">
+    <div class="header__logo__wrapper">
+      DIVA
+    </div>    
+    <div class="header__time">
+      {{ currentDate | date: 'EEEE, dd. MMMM | HH:mm': 'de' }}
+    </div>
+  </div>
+  <div class="header__menu">
+    <div class="view-info">
+      <div class="view-name">
+        Instandhaltung
+      </div>
+    </div>
+    <div class="view-menu">
+      <mat-icon (click)="toggle = !toggle" class="menu-icon" aria-hidden="false" aria-label="menu_icon" fontIcon="more_vert"></mat-icon>
+      <div [ngClass]="{'display-none' : !toggle}" class="dropdown-menu" #menu>
+        <ul>
+          <li (click)="homePage()">
+            <div class="admin-li-el">
+              <p>Instandhaltung</p>
+            </div>
+          </li>
+          <li (click)="openDialog()" class="admin-li-el">
+            <div>
+              <p>Dashboard-Admin</p>
+              <p class="admin-name">Anmeldung erforderlich</p>
+            </div>
+            <mat-icon style="margin-bottom: 15px; color: grey;">lock</mat-icon>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
